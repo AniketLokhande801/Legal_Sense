@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LegalSense – Upload Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LegalSense</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Upload your legal PDF:</label>
+            <input type="file" id="file" name="file" accept="application/pdf" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html> 
