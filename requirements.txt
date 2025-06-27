@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pymupdf
+chromadb
+transformers
+torch
+python-multipart
+# Optional for Gemini LLM
+google-generativeai 
