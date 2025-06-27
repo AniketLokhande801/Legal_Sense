@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LegalSense – Ask a Question</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ask a Question</h1>
+        <form action="/ask" method="post">
+            <input type="hidden" name="session_id" value="{{ session_id }}">
+            <label for="question">Your question:</label>
+            <input type="text" id="question" name="question" required>
+            <button type="submit">Ask</button>
+        </form>
+        {% if answer %}
+        <div class="answer">
+            <h2>Answer:</h2>
+            <p>{{ answer }}</p>
+        </div>
+        {% endif %}
+        <form action="/cleanup" method="post">
+            <input type="hidden" name="session_id" value="{{ session_id }}">
+            <button type="submit">End Session & Delete Data</button>
+        </form>
+    </div>
+</body>
+</html> 
